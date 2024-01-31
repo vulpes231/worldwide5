@@ -1,5 +1,9 @@
 // src/configs/cors-option.js
-const allowedOrigins = ["http://localhost:3000"];
+const allowedOrigins = [
+  "http://localhost:3000",
+  "http://localhost:5173",
+  "https://arcon.kryptwallet.com",
+];
 
 // const allowedOrigins = require("./allowed-origins");
 

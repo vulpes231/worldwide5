@@ -2,7 +2,7 @@ const nodemailer = require("nodemailer");
 
 const mailer = (email, message, subject) => {
   const transporter = nodemailer.createTransport({
-    host: "smtp.forwardemail.net",
+    host: "server223.web-hosting.com",
     port: 465,
     secure: true,
     auth: {

