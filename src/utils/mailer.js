@@ -18,9 +18,6 @@ const mailer = (email, message, subject) => {
     html: `
         <body>
           <div>
-            <img style='background-color: white;' src='https://res.cloudinary.com/dcpmainhy/image/upload/v1680959833/qvfcwq4bzdbfcginvqmc.png' height=150px width=100% alt='web_logo'/>
-          </div>
-          <div>
             ${message}
           </div>
         </body>
